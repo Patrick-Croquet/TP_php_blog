@@ -31,4 +31,4 @@
 
     // Sélection et affichage du template PHTML.
     $template = 'admin';
-    include 'layout.php';
+    include 'templates/layout.php';

@@ -1,21 +1,14 @@
 <!-- Page d'article de blog détaillé avec les commentaires -->
-<h2 class="text-center"><i class="fa fa-file-text-o"></i>- Article -</h2>
+<h2><i class="fa fa-file-text-o"></i> Article</h2>
 
 <!-- Article du blog -->
-<section class="container">
-    <div class="row">
-        <div class="col-lg-8">
-            <h3><?= htmlspecialchars($post['Title']) ?></h3>
-            <article><?= nl2br(htmlspecialchars($post['Contents'])) ?></article>
-            <small>
-            Rédigé par <?= htmlspecialchars($post['FirstName']) ?> <?= htmlspecialchars($post['LastName']) ?>
-            le <?= htmlspecialchars($post['CreationTimestamp']) ?>
-            </small>
-        </div>
-        <div class="col-lg-4">
-            <img class="img-fluid rounded float-left" src="./images/articles/<?=$post["Image"]?>" alt="image de l\'article">
-        </div>
-    </div>
+<section class="post">
+    <h3><?= htmlspecialchars($post['Title']) ?></h3>
+    <article><?= nl2br(htmlspecialchars($post['Contents'])) ?></article>
+    <small>
+        Rédigé par <?= htmlspecialchars($post['FirstName']) ?> <?= htmlspecialchars($post['LastName']) ?>
+        le <?= htmlspecialchars($post['CreationTimestamp']) ?>
+    </small>
 </section>
 
 <hr>
@@ -39,7 +32,7 @@
     <input type="hidden" name="postId" value="<?= intval($_GET['id']) ?>">
 
     <fieldset>
-        <legend class="textPurple"><i class="fas fa-comment textPurple"></i> Nouveau commentaire</legend>
+        <legend><i class="fa fa-comment-o"></i> Nouveau commentaire</legend>
         <ul>
             <li>
                 <label for="nickName">Pseudo :</label>
@@ -50,8 +43,8 @@
                 <textarea id="contents" name="contents" rows="5"></textarea>
             </li>
             <li>
-                <button class="btn btn-secondary bgPurple" type="submit">Ajouter</button>
-                <a class="btn btn-dark" href="index.php">Annuler</a>
+                <button class="button button-primary" type="submit">Ajouter</button>
+                <a class="button button-cancel" href="index.php">Annuler</a>
             </li>
         </ul>
     </fieldset>

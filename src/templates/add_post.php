@@ -4,7 +4,7 @@
 <!-- Formulaire de saisie d'un nouvel article -->
 <form class="generic-form" action="add_post.php" method="post">
     <fieldset>
-        <legend class="textPurple"><i class="fas fa-sticky-note textPurple"></i> Nouvel article</legend>
+        <legend><i class="fa fa-sticky-note-o"></i> Nouvel article</legend>
         <ul>
             <li>
                 <label for="title">Titre :</label>
@@ -13,12 +13,6 @@
             <li>
                 <label class="textarea" for="contents">Article :</label>
                 <textarea id="contents" name="contents" rows="15"></textarea>
-            </li>
-            <li>
-                <div class="form-group">
-                    <label for="photo">Image :</label>
-                    <input type="file" class="form-control-file" id="photo" name="photo">
-                </div>
             </li>
             <li>
                 <label for="author">Auteur :</label>
@@ -37,8 +31,8 @@
                 </select>
             </li>
             <li>
-                <button class="btn btn-secondary bgPurple" type="submit">Enregistrer</button>
-                <a class="btn btn-dark" href="index.php">Annuler</a>
+                <button class="button button-primary" type="submit">Enregistrer</button>
+                <a class="button button-cancel" href="index.php">Annuler</a>
             </li>
         </ul>
     </fieldset>

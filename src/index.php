@@ -9,7 +9,6 @@
             Post.Id,
             Title,
             Contents,
-            Image,
             CreationTimestamp,
             FirstName,
             LastName
@@ -27,4 +26,4 @@
 
     // Sélection et affichage du template PHTML.
     $template = 'index';
-    include 'layout.php';
+    include 'templates/layout.php';

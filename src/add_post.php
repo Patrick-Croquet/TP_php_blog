@@ -31,7 +31,7 @@
 
         // Sélection et affichage du template PHTML.
         $template = 'add_post';
-        include 'layout.php';
+        include 'templates/layout.php';
     }
     else
     {
@@ -40,12 +40,12 @@
         '
             INSERT INTO
                 Post
-                (Title, Contents, Image, Author_Id, Category_Id, CreationTimestamp)
+                (Title, Contents, Author_Id, Category_Id, CreationTimestamp)
             VALUES
-                (?, ?, ?,?, ?, NOW())
+                (?, ?, ?, ?, NOW())
         ';
         $resultSet = $pdo->prepare($query);
-        $resultSet->execute([$_POST['title'], $_POST['contents'],$_POST['photo'], $_POST['author'], $_POST['category']]);
+        $resultSet->execute([$_POST['title'], $_POST['contents'], $_POST['author'], $_POST['category']]);
 
         // Retour à la page d'accueil une fois que le nouvel article du blog a été ajouté.
         header('Location: index.php');

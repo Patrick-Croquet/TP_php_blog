@@ -17,8 +17,7 @@
             SELECT
                 Id,
                 Title,
-                Contents,
-                Image
+                Contents
             FROM
                 Post
             WHERE
@@ -30,7 +29,7 @@
 
         // Sélection et affichage du template PHTML.
         $template = 'edit_post';
-        include 'layout.php';
+        include 'templates/layout.php';
     }
     else
     {
@@ -41,14 +40,12 @@
                 Post
             SET
                 Title = ?,
-                Contents = ?,
-                Image = ?
+                Contents = ?
             WHERE
                 Id = ?
         ';
         $resultSet = $pdo->prepare($query);
-        
-        $resultSet->execute([$_POST['title'], $_POST['contents'], $_POST["photo"], $_POST['postId']]);
+        $resultSet->execute([$_POST['title'], $_POST['contents'], $_POST['postId']]);
 
         // Retour au panneau d'administration.
         header('Location: admin.php');
