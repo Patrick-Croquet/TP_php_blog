@@ -1,2 +1,2 @@
-# TP_php_blog
- TP PHP Blog
+# TPBlog
+ TP sur un blog avec php mysql bootstrap
